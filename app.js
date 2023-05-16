@@ -180,12 +180,44 @@ r1.on("close", () => {
 
 // server.listen("3000");
 
-const http = require("http");
-const fs = require("fs");
-http
-  .createServer((req, res) => {
-    const readStream = fs.createReadStream("./static/아이네.png");
-    res.writeHead(200, { "Content-type": "image/png" });
-    readStream.pipe(res);
-  })
-  .listen(3000);
+//step 9
+// const http = require("http");
+// const fs = require("fs");
+// http
+//   .createServer((req, res) => {
+//     const readStream = fs.createReadStream("./static/아이네.png");
+//     res.writeHead(200, { "Content-type": "image/png" });
+//     readStream.pipe(res);
+//   })
+//   .listen(3000);
+
+const lodash = require("lodash");
+let example = lodash.fill([1, 2, 3, 4, 5], "banana", 1, 4);
+console.log(example);
+
+//json
+// {
+//   "name": "nodejs_tutorial",
+//   "version": "1.0.0",
+//   "description": "tutorial step 10",
+//   "main": "app.js",
+//   "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1"
+//   },
+//   "repository": {
+//     "type": "git",
+//     "url": "git+https://github.com/JamesKang003/JavascriptLearn.git"
+//   },
+//   "author": "James Kang",
+//   "license": "ISC",
+//   "bugs": {
+//     "url": "https://github.com/JamesKang003/JavascriptLearn/issues"
+//   },
+//   "homepage": "https://github.com/JamesKang003/JavascriptLearn#readme",
+//   "dependencies": {
+//     "lodash": "^4.17.21" //major.minor.patch
+//^: 4.x.x
+//~: 4.17.x
+//4.17.21
+//   }
+// }
