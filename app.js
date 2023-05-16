@@ -165,3 +165,15 @@ r1.on("close", () => {
 // const readStream = fs.createReadStream("./example2.txt.gz");
 // const writeStream = fs.createWriteStream("uc.txt");
 // readStream.pipe(gunzip).pipe(writeStream);
+const http = require("http");
+const server = http.createServer((req, res) => {
+  if (req.url == "/") {
+    res.write("hello world");
+    res.end();
+  } else {
+    res.write("using some other domain");
+    res.end();
+  }
+});
+
+server.listen("3000");
