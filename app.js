@@ -191,11 +191,13 @@ r1.on("close", () => {
 //   })
 //   .listen(3000);
 
-const lodash = require("lodash");
-let example = lodash.fill([1, 2, 3, 4, 5], "banana", 1, 4);
-console.log(example);
+// step 10
+// const lodash = require("lodash");
+// let example = lodash.fill([1, 2, 3, 4, 5], "banana", 1, 4);
+// console.log(example);
 
 //json
+// step 11
 // {
 //   "name": "nodejs_tutorial",
 //   "version": "1.0.0",
@@ -221,3 +223,22 @@ console.log(example);
 //4.17.21
 //   }
 // }
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+
+app.get("/example", (req, res) => {
+  res.send("hitting example route");
+});
+
+app.get("/example/:name/:age", (req, res) => {
+  console.log(req.params);
+  console.log(req.query);
+  res.send(req.params.name + " : " + req.params.age);
+});
+
+app.listen(3000);
