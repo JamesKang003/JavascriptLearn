@@ -105,3 +105,47 @@ r1.on("close", () => {
 //   if (err) console.log(err);
 //   else console.log("delete success");
 // });
+
+//step 5)
+// const fs = require("fs");
+// // fs.mkdir("tutorial", (err) => {
+// //   if (err) console.log(err);
+// //   else {
+// //     fs.writeFile("./tutorial/example.txt", "123", (err) => {
+// //       if (err) console.log(err);
+// //       else {
+// //         console.log("created file successfully");
+// //       }
+// //     });
+// //   }
+// // });
+
+// // fs.unlink("./tutorial/example.txt", (err) => {
+// //   if (err) {
+// //     console.log("deleted file");
+// //   } else {
+// //     console.log("deleted file");
+// //     fs.rmdir("tutorial", (err) => {
+// //       if (err) console.log(err);
+// //       else {
+// //         console.log("file deleted");
+// //       }
+// //     });
+// //   }
+// // });
+
+// fs.readdir("example", (err, files) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     for (let file of files) {
+//       fs.unlink(`./example/${file}`, (err) => {
+//         if (err) {
+//           console.log(err);
+//         } else {
+//           console.log(`deleted: ${file}`);
+//         }
+//       });
+//     }
+//   }
+// });
